@@ -8,7 +8,6 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import porject_7.CourierClient;
 import porject_7.OrderData;
 import io.restassured.RestAssured;
 
@@ -16,16 +15,9 @@ import io.restassured.RestAssured;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
 
-@RunWith(Parameterized.class)
 public class OrderCreationTest {
 
     private static final String BASE_URL = "https://qa-scooter.praktikum-services.ru/api/v1/orders";
-//    @Before
-//    public void setUp() {
-//        RestAssured.filters(new ResponseLoggingFilter(LogDetail.ALL));
-//    }
-
-
 
     @DataProvider(name = "orderData")
     public Object[][] getOrderData() {
