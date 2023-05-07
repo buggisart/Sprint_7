@@ -4,11 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4775bf0-dc50-4fbf-b577-303d42d62ffa" name="Changes" comment="" />
+    <list default="true" id="e4775bf0-dc50-4fbf-b577-303d42d62ffa" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/porject_7/Courier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/porject_7/Courier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/porject_7/CourierClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/porject_7/CourierClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/porject_7/CourierCredentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/porject_7/CourierCredentials.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/porject_7/CourierGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/porject_7/CourierGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/porject_7/OrderData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/porject_7/OrderData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/porject_7/RestClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/porject_7/RestClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/project_7/CourierLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/project_7/CourierLoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/project_7/CreateCourierTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/project_7/CreateCourierTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/project_7/OrderCreationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/project_7/OrderCreationTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -23,12 +48,111 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="porject_7" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.OrderCreationTest">
+    <configuration name="CourierLoginTest.courierCredentialsIncorrectError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sprint_7" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="project_7.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="project_7" />
+      <option name="MAIN_CLASS_NAME" value="project_7.CourierLoginTest" />
+      <option name="METHOD_NAME" value="courierCredentialsIncorrectError" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CourierLoginTest.courierLoginIncorrectError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sprint_7" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="project_7.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="project_7" />
+      <option name="MAIN_CLASS_NAME" value="project_7.CourierLoginTest" />
+      <option name="METHOD_NAME" value="courierLoginIncorrectError" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CourierLoginTest.courierLoginSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sprint_7" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="project_7.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="project_7" />
+      <option name="MAIN_CLASS_NAME" value="project_7.CourierLoginTest" />
+      <option name="METHOD_NAME" value="courierLoginSuccess" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CourierLoginTest.courierPasswordIncorrectError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sprint_7" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="project_7.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="project_7" />
+      <option name="MAIN_CLASS_NAME" value="project_7.CourierLoginTest" />
+      <option name="METHOD_NAME" value="courierPasswordIncorrectError" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderCreationTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Sprint_7" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="project_7.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="project_7" />
+      <option name="MAIN_CLASS_NAME" value="project_7.OrderCreationTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.OrderCreationTest" />
+        <item itemvalue="JUnit.CourierLoginTest.courierCredentialsIncorrectError" />
+        <item itemvalue="JUnit.CourierLoginTest.courierPasswordIncorrectError" />
+        <item itemvalue="JUnit.CourierLoginTest.courierLoginIncorrectError" />
+        <item itemvalue="JUnit.CourierLoginTest.courierLoginSuccess" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
