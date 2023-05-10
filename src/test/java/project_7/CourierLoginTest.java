@@ -1,16 +1,10 @@
 package project_7;
 
-import io.restassured.RestAssured;
-import io.restassured.filter.log.LogDetail;
-import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.response.ValidatableResponse;
+import jdk.jfr.Description;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import porject_7.Courier;
-import porject_7.CourierClient;
-import porject_7.CourierCredentials;
-import porject_7.CourierGenerator;
 
 import static org.hamcrest.Matchers.*;
 
@@ -23,11 +17,10 @@ public class CourierLoginTest {
     @Before
     public void setUp() {
         courierClient = new CourierClient();
-                RestAssured.filters(new ResponseLoggingFilter(LogDetail.ALL));
-
     }
 
     @Test
+    @Description("Позитивный кейс")
     public void courierLoginSuccess() {
         courier = CourierGenerator.getRandomWithAllParams();
         courierClient.create(courier);
@@ -36,16 +29,19 @@ public class CourierLoginTest {
         loginResponse.assertThat().body("id",  greaterThanOrEqualTo(1)).statusCode(200);
     }
     @Test
+    @Description("Логин курьера без логина")
     public void courierLoginNoParamError() {
         ValidatableResponse loginResponse = courierClient.login(CourierCredentials.from(CourierGenerator.getRandomWithoutLogin()));
         loginResponse.assertThat().body("message", equalTo("Недостаточно данных для входа")).body("code", equalTo(400)).statusCode(400);
     }
     @Test
+    @Description("Логин курьера без пароля")
     public void courierPasswordNoParamError() {
         ValidatableResponse loginResponse = courierClient.login(CourierCredentials.from(CourierGenerator.getRandomWithoutPassword()));
         loginResponse.assertThat().body("message",  equalTo("Недостаточно данных для входа")).body("code", equalTo(400)).statusCode(400);
     }
     @Test
+    @Description("Логина курьера с неправильными кредами")
     public void courierCredentialsIncorrectError() {
         CourierCredentials courierCredentials = new CourierCredentials("f@ы", "тест");
         ValidatableResponse loginResponse = courierClient.login(courierCredentials);

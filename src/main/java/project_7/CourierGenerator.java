@@ -1,4 +1,4 @@
-package porject_7;
+package project_7;
 
 import org.apache.commons.lang3.RandomStringUtils;
 
@@ -29,6 +29,4 @@ public class CourierGenerator {
         final String password = RandomStringUtils.randomAlphabetic(10);
         return new Courier(login, password, null);
     }
-
-
 }

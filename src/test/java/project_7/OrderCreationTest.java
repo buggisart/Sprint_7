@@ -1,15 +1,10 @@
 package project_7;
 
 import com.google.gson.Gson;
-import io.restassured.filter.log.LogDetail;
-import io.restassured.filter.log.ResponseLoggingFilter;
-import org.junit.Before;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
+import jdk.jfr.Description;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import porject_7.OrderData;
-import io.restassured.RestAssured;
+
 
 
 import static io.restassured.RestAssured.given;
@@ -24,42 +19,43 @@ public class OrderCreationTest {
         return new Object[][]{
                 {new OrderData()
                 {{
-                    firstName = "Naruto";
-                    lastName = "Uchiha";
-                    address = "Konoha, 142 apt.";
-                    metroStation = 4;
-                    phone = "+7 800 355 35 35";
-                    rentTime = 5;
-                    deliveryDate = "2020-06-06";
-                    comment = "Saske, come back to Konoha";
-                    color = new String[]{"BLACK"};
+                    setFirstName("Naruto");
+                    setLastName("Uchiha");
+                    setAddress("Konoha, 142 apt.");
+                    setMetroStation("4");
+                    setPhone("+7 800 355 35 35");
+                    setRentTime(5);
+                    setDeliveryDate("2020-06-06");
+                    setComment("Saske, come back to Konoha");
+                    setColor(new String[]{"BLACK"});
                 }}, "BLACK"},
                 {new OrderData() {{
-                    firstName = "Sakura";
-                    lastName = "Haruno";
-                    address = "Konoha, 15 apt.";
-                    metroStation = 8;
-                    phone = "+7 800 355 35 35";
-                    rentTime = 10;
-                    deliveryDate = "2020-06-08";
-                    comment = "Naruto, I believe in you";
-                    color = new String[]{"BLACK", "GREY"};
+                    setFirstName("Sakura");
+                    setLastName("Haruno");
+                    setAddress("Konoha, 15 apt.");
+                    setMetroStation("8");
+                    setPhone("+7 800 355 35 35");
+                    setRentTime(10);
+                    setDeliveryDate("2020-06-08");
+                    setComment("Naruto, I believe in you");
+                    setColor(new String[]{"BLACK", "GREY"});
                 }}, "BLACK,GREY"},
                 {new OrderData() {{
-                    firstName = "Hinata";
-                    lastName = "Hyuga";
-                    address = "Konoha, 23 apt.";
-                    metroStation = 1;
-                    phone = "+7 800 355 35 35";
-                    rentTime = 3;
-                    deliveryDate = "2020-06-10";
-                    comment = "Naruto, I'm always cheering for you";
-                    color = new String[]{};
+                    setFirstName("Hinata");
+                    setLastName("Hyuga");
+                    setAddress("Konoha, 23 apt.");
+                    setMetroStation("1");
+                    setPhone("+7 800 355 35 35");
+                    setRentTime(3);
+                    setDeliveryDate("2020-06-10");
+                    setComment("Naruto, I'm always cheering for you");
+                    setColor(new String[]{});
                 }}, ""},
         };
     }
 
     @Test(dataProvider = "orderData")
+    @Description("Создание ордера")
     public void testCreateOrder(OrderData orderData, String expectedColor) {
         Gson gson = new Gson();
         String jsonBody = gson.toJson(orderData);

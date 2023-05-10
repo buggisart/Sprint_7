@@ -1,17 +1,10 @@
 package project_7;
 
-import io.restassured.RestAssured;
-import io.restassured.filter.log.LogDetail;
-import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.response.ValidatableResponse;
-import io.restassured.specification.RequestSpecification;
+import jdk.jfr.Description;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import porject_7.Courier;
-import porject_7.CourierClient;
-import porject_7.CourierCredentials;
-import porject_7.CourierGenerator;
 
 import static org.hamcrest.Matchers.*;
 import static org.hamcrest.Matchers.greaterThanOrEqualTo;
@@ -24,10 +17,10 @@ public class CreateCourierTest {
     @Before
     public void setUp() {
         courierClient = new CourierClient();
-//        RestAssured.filters(new ResponseLoggingFilter(LogDetail.ALL));
     }
 
     @Test
+    @Description("Создание курьера с корректными данными")
     public void createCourierWithAllParamsSuccess() {
         // Тестовые данные
         courier = CourierGenerator.getRandomWithAllParams();
@@ -45,6 +38,7 @@ public class CreateCourierTest {
     }
 
     @Test
+    @Description("Созданеи идентичного курьера")
     public void createTheSameCourierError() {
 
         // Тестовые данные
@@ -68,6 +62,7 @@ public class CreateCourierTest {
     }
 
     @Test
+    @Description("Создание курьера без пароля")
     public void createCourierWithoutPasswordError() {
 
         // Тестовые данные
@@ -82,6 +77,7 @@ public class CreateCourierTest {
     }
 
     @Test
+    @Description("Создание курьера без логина")
     public void createCourierWithoutLoginError() {
 
         courier = CourierGenerator.getRandomWithoutLogin();
@@ -93,6 +89,7 @@ public class CreateCourierTest {
         response.assertThat().body("message", equalTo("Недостаточно данных для создания учетной записи")).body("code", equalTo(400)).statusCode(400);
     }
     @Test
+    @Description("Создание курьера только с обязательными параметрами")
     public void createCourierWithRequiredParams() {
 
         courier = CourierGenerator.getRandomWithRequiredParams();
@@ -109,9 +106,12 @@ public class CreateCourierTest {
     }
 
     @Test
+    @Description("Создание двух курьеров с одинаковым логином, но разными паролями и именами")
     public void createTheSameLoginCourierError() {
         // Тестовые данные
-        Courier courierFirst = new Courier("LoginTesttt","pass", "name");
+        Courier courierFirst = new Courier(CourierGenerator.getRandomWithRequiredParams().getLogin(), CourierGenerator.getRandomWithRequiredParams().getPassword(),
+        CourierGenerator.getRandomWithRequiredParams().getFirstName());
+
         // Вызвать эндпоинт создания курьера
         ValidatableResponse response = courierClient.create(courierFirst);
 
@@ -123,7 +123,8 @@ public class CreateCourierTest {
         loginResponse.assertThat().body("id", greaterThanOrEqualTo(1));
 
         // Проверить что нельзя создать курьера с таким же логином
-        ValidatableResponse responseForTheSameLogin = courierClient.create(new Courier("LoginTesttt", "NewPass", "newName"));
+        ValidatableResponse responseForTheSameLogin = courierClient.create(new Courier(courierFirst.getLogin(),CourierGenerator.getRandomWithRequiredParams().getPassword(),
+                CourierGenerator.getRandomWithRequiredParams().getFirstName()));
         responseForTheSameLogin.assertThat().body("message", equalTo("Этот логин уже используется. Попробуйте другой.")).body("code", equalTo(409)).statusCode(409);
     }
 

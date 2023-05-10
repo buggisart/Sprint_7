@@ -1,4 +1,4 @@
-package porject_7;
+package project_7;
 
 public class CourierCredentials {
 

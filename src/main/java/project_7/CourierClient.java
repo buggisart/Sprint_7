@@ -1,6 +1,5 @@
-package porject_7;
+package project_7;
 
-import io.restassured.RestAssured;
 import io.restassured.response.ValidatableResponse;
 
 import static io.restassured.RestAssured.given;
@@ -8,7 +7,6 @@ import static io.restassured.RestAssured.given;
 public class    CourierClient extends RestClient {
     private static final String COURIER_PATH = "api/v1/courier/";
     private static final String LOGIN_PATH = "api/v1/courier/login/";
-
     private static final String DELETE_COURIER_PATH = "api/v1/courier/{id}";
 
 
