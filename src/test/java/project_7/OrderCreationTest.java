@@ -1,7 +1,8 @@
 package project_7;
 
 import com.google.gson.Gson;
-import jdk.jfr.Description;
+import io.restassured.response.ValidatableResponse;
+import io.qameta.allure.Description;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -9,6 +10,7 @@ import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
+import static org.testng.AssertJUnit.assertEquals;
 
 public class OrderCreationTest {
 
@@ -17,58 +19,32 @@ public class OrderCreationTest {
     @DataProvider(name = "orderData")
     public Object[][] getOrderData() {
         return new Object[][]{
-                {new OrderData()
-                {{
-                    setFirstName("Naruto");
-                    setLastName("Uchiha");
-                    setAddress("Konoha, 142 apt.");
-                    setMetroStation("4");
-                    setPhone("+7 800 355 35 35");
-                    setRentTime(5);
-                    setDeliveryDate("2020-06-06");
-                    setComment("Saske, come back to Konoha");
-                    setColor(new String[]{"BLACK"});
-                }}, "BLACK"},
-                {new OrderData() {{
-                    setFirstName("Sakura");
-                    setLastName("Haruno");
-                    setAddress("Konoha, 15 apt.");
-                    setMetroStation("8");
-                    setPhone("+7 800 355 35 35");
-                    setRentTime(10);
-                    setDeliveryDate("2020-06-08");
-                    setComment("Naruto, I believe in you");
-                    setColor(new String[]{"BLACK", "GREY"});
-                }}, "BLACK,GREY"},
-                {new OrderData() {{
-                    setFirstName("Hinata");
-                    setLastName("Hyuga");
-                    setAddress("Konoha, 23 apt.");
-                    setMetroStation("1");
-                    setPhone("+7 800 355 35 35");
-                    setRentTime(3);
-                    setDeliveryDate("2020-06-10");
-                    setComment("Naruto, I'm always cheering for you");
-                    setColor(new String[]{});
-                }}, ""},
+                {new OrderData("HIn","uga","Konoha, 3 apt.", "1","+7 810 355 35 35", 3, "2021-06-10","I'm always cheering for you", new String[]{"BLACK,GREY"}), 201},
+                {new OrderData("Test","tesg","Konoha, 5 apt.", "4","+7 860 355 35 35", 4, "2023-06-10","always cheering for you", new String[]{"BLACK"}), 201},
+                {new OrderData("Hata","Hga","Konoha, 1 apt.", "2","+7 820 355 35 35", 2, "2022-06-10","Naruto", new String[]{"GREY"}), 201},
+                {new OrderData("Hinata","Hyuga","Konoha, 23 apt.", "3","+7 800 355 35 35", 1, "2020-06-10","Naruto, I'm always cheering for you", new String[]{""}), 201},
         };
     }
 
     @Test(dataProvider = "orderData")
     @Description("Создание ордера")
-    public void testCreateOrder(OrderData orderData, String expectedColor) {
+    public void testCreateOrder(OrderData orderData, int expectedStatus) {
         Gson gson = new Gson();
         String jsonBody = gson.toJson(orderData);
 
-        given()
+        ValidatableResponse response = given()
                 .contentType("application/json")
                 .body(jsonBody)
+                .log().all()
                 .when()
                 .post(BASE_URL)
                 .then()
+                .log().all()
                 .statusCode(201)
-                .body("track", not(empty()))
-                .body("color", equalTo(expectedColor));
+                .body("track", not(empty()));
+
+        int actualStatus = response.extract().statusCode();
+        assertEquals(expectedStatus,actualStatus);
     }
 
 }

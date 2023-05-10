@@ -1,7 +1,7 @@
 package project_7;
 
 import io.restassured.response.ValidatableResponse;
-import jdk.jfr.Description;
+import io.qameta.allure.Description;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
