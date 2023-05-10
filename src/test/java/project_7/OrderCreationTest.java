@@ -35,11 +35,9 @@ public class OrderCreationTest {
         ValidatableResponse response = given()
                 .contentType("application/json")
                 .body(jsonBody)
-                .log().all()
                 .when()
                 .post(BASE_URL)
                 .then()
-                .log().all()
                 .statusCode(201)
                 .body("track", not(empty()));
 
