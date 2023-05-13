@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4775bf0-dc50-4fbf-b577-303d42d62ffa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/project_7/GetOrders.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/project_7/CreateOrder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/project_7/GetOrdersTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/project_7/GetOrdersTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/project_7/OrderCreationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/project_7/OrderCreationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +53,7 @@
       <recent name="porject_7" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GetOrdersTest.getOrdersSuccess">
+  <component name="RunManager" selected="TestNG.OrderCreationTest.testCreateOrder">
     <configuration name="CreateCourierTest.createTheSameLoginCourierError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Sprint_7" />
       <extension name="coverage">
@@ -132,8 +131,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GetOrdersTest.getOrdersSuccess" />
         <item itemvalue="TestNG.OrderCreationTest.testCreateOrder" />
+        <item itemvalue="JUnit.GetOrdersTest.getOrdersSuccess" />
         <item itemvalue="JUnit.project_7 in Sprint_7" />
         <item itemvalue="TestNG.OrderCreationTest" />
         <item itemvalue="JUnit.CreateCourierTest.createTheSameLoginCourierError" />

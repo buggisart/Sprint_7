@@ -6,13 +6,11 @@ import io.qameta.allure.Description;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import static io.restassured.RestAssured.given;
+
 import static org.hamcrest.Matchers.*;
 import static org.testng.AssertJUnit.assertEquals;
 
 public class OrderCreationTest {
-
-    private static final String BASE_URL = "https://qa-scooter.praktikum-services.ru/api/v1/orders";
 
     @DataProvider(name = "orderData")
     public Object[][] getOrderData() {
@@ -29,16 +27,9 @@ public class OrderCreationTest {
     public void testCreateOrder(OrderData orderData, int expectedStatus) {
         Gson gson = new Gson();
         String jsonBody = gson.toJson(orderData);
-
-        ValidatableResponse response = given()
-                .contentType("application/json")
-                .body(jsonBody)
-                .when()
-                .post(BASE_URL)
-                .then()
-                .statusCode(201)
-                .body("track", not(empty()));
-
+        CreateOrder createOrder = new CreateOrder();
+        ValidatableResponse response = createOrder.createOrder(jsonBody);
+        response.body("track", not(empty()));
         int actualStatus = response.extract().statusCode();
         assertEquals(expectedStatus,actualStatus);
     }
