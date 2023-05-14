@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4775bf0-dc50-4fbf-b577-303d42d62ffa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/project_7/CreateOrder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/project_7/OrderCreationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/project_7/OrderCreationTest.java" afterDir="false" />
     </list>
@@ -53,23 +52,7 @@
       <recent name="porject_7" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.OrderCreationTest.testCreateOrder">
-    <configuration name="CreateCourierTest.createTheSameLoginCourierError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Sprint_7" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="project_7.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="project_7" />
-      <option name="MAIN_CLASS_NAME" value="project_7.CreateCourierTest" />
-      <option name="METHOD_NAME" value="createTheSameLoginCourierError" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.project_7 in Sprint_7">
     <configuration name="GetOrdersTest.getOrdersSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Sprint_7" />
       <extension name="coverage">
@@ -86,15 +69,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="project_7 in Sprint_7" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Sprint_7" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/src/test/java/project_7" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OrderCreationTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="OrderCreationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Sprint_7" />
       <extension name="coverage">
         <pattern>
@@ -104,9 +79,31 @@
       </extension>
       <option name="PACKAGE_NAME" value="project_7" />
       <option name="MAIN_CLASS_NAME" value="project_7.OrderCreationTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderCreationTest.testCreateOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sprint_7" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="project_7.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="project_7" />
+      <option name="MAIN_CLASS_NAME" value="project_7.OrderCreationTest" />
+      <option name="METHOD_NAME" value="testCreateOrder" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="project_7 in Sprint_7" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sprint_7" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/project_7" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -131,11 +128,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.project_7 in Sprint_7" />
+        <item itemvalue="JUnit.OrderCreationTest.testCreateOrder" />
+        <item itemvalue="JUnit.OrderCreationTest" />
         <item itemvalue="TestNG.OrderCreationTest.testCreateOrder" />
         <item itemvalue="JUnit.GetOrdersTest.getOrdersSuccess" />
-        <item itemvalue="JUnit.project_7 in Sprint_7" />
-        <item itemvalue="TestNG.OrderCreationTest" />
-        <item itemvalue="JUnit.CreateCourierTest.createTheSameLoginCourierError" />
       </list>
     </recent_temporary>
   </component>
