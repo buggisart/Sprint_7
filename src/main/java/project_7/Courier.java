@@ -1,3 +1,5 @@
+package project_7;
+
 public class Courier {
     private String login;
     private String password;
